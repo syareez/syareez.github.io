@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PG GAP DAILY PRICE
+title: Public Gold (Gold Accumulation Programme) Daily Price Update
 ---
 <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 <div id="chart-container" style="height: 400px;"></div>
