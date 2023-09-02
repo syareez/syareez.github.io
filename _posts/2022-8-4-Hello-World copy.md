@@ -3,8 +3,6 @@ layout: post
 title: Mapping The Noise From Urban Rail Transport Lines In The Greater Klang Valley Area; A Final Year Project
 ---
 
-# Abstract
-
 The Malaysian Department of Environment (DOE) has set environmental noise 
 limitations and regulation standards, which apply to railways and transit trains. The 
 maximum noise and vibration levels must be adhered to avoid human discomfort. The 
