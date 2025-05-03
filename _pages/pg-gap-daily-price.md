@@ -12,4 +12,4 @@ permalink: /pgdp/
     Disclaimer: 
     We do not guarantee the accuracy of the prices. Our gold price charts come with no guarantee or assurance of reliability. The site visitor accepts it on the condition that inaccuracies or omissions are not used as the basis for any claim, demand, or cause of action. It is the reader's obligation to conduct sufficient due diligence before acting on any of the information supplied. Before making any investing decisions, we urge that you consult with a licensed, certified investment advisor.
 </p>
-<script src="{{ base.url | prepend: site.url }}/assets/js/pgdp.min.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/pgdp.js"></script>
