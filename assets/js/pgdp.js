@@ -88,16 +88,14 @@
   });
 
   // Export Image
-  document.getElementById("export-btn").addEventListener("click", () => {
-	const canvas = document.querySelector("#chart canvas");
-	const imgURL = canvas.toDataURL("image/png");
-
-	const a = document.createElement("a");
-	a.href = imgURL;
-	a.download = "chart.png";
-	a.click();
+  document.getElementById('export-btn').addEventListener('click', () => {
+	html2canvas(document.getElementById('chart')).then(canvas => {
+		const link = document.createElement('a');
+		link.download = 'chart.png';
+		link.href = canvas.toDataURL();
+		link.click();
 	});
-
+  });
 
   // Toggle SMA
   document.getElementById('toggle-sma').addEventListener('click', () => {
@@ -116,33 +114,7 @@
     }
   });
 
-  // Crosshair Tooltip
-  const tooltip = document.getElementById('tooltip');
-
-  chart.subscribeCrosshairMove(param => {
-	if (
-		!param || !param.time ||
-		param.point.x < 0 || param.point.y < 0 ||
-		param.point.x > chartContainer.clientWidth ||
-		param.point.y > chartContainer.clientHeight
-	) {
-		tooltip.style.display = 'none';
-		return;
-	}
-
-  const price = param.seriesData.get(areaSeries)?.value;
-  const date = new Date(param.time * 1000); // convert timestamp to Date
-
-  tooltip.style.display = 'block';
-  tooltip.style.left = param.point.x + 15 + 'px';
-  tooltip.style.top = param.point.y + 15 + 'px';
-  tooltip.innerHTML = `
-    <strong>${date.toLocaleDateString()}</strong><br>
-    Price: ${price?.toFixed(2)}
-  `;
-  });
-
-  
+  // Resize Chart
   window.addEventListener('resize', () => {
   chart.resize(document.getElementById('chart').clientWidth, document.getElementById('chart').clientHeight);
 	});

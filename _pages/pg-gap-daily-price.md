@@ -40,18 +40,9 @@ permalink: /pgdp/
   }
 </style>
 <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
 <div id="chart"></div>
-<div id="tooltip" style="
-  position: absolute;
-  display: none;
-  padding: 6px 8px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  font-size: 12px;
-  border-radius: 4px;
-  pointer-events: none;
-  z-index: 10;
-"></div>
 
 <div id="controls">
   <button id="toggle-theme">Toggle Theme</button>
