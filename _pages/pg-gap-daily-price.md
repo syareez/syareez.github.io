@@ -41,10 +41,21 @@ permalink: /pgdp/
 </style>
 <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
 <div id="chart"></div>
+<div id="tooltip" style="
+  position: absolute;
+  display: none;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 10;
+"></div>
 
 <div id="controls">
   <button id="toggle-theme">Toggle Theme</button>
-  <button id="export">Export Image</button>
+  <button id="export-btn">Export Image</button>
   <button id="toggle-sma">Toggle SMA</button>
   <button id="toggle-bb">Toggle Bollinger Bands</button>
   <button data-range="7">1W</button>
