@@ -3,8 +3,56 @@ layout: page
 title: Public Gold&#174; (GAP) Daily Price
 permalink: /pgdp/
 ---
-<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-<div id="chart-container" style="height: 400px;"></div>
+<style>
+  #chart {
+    width: 100%;
+    height: 400px; /* Or use 60vh for vertical responsiveness */
+  }
+
+  @media (max-width: 768px) {
+    #chart {
+      height: 300px;
+    }
+
+    .chart-buttons {
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chart-buttons button {
+      flex: 1 0 48%;
+      font-size: 14px;
+    }
+  }
+
+  .chart-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .chart-buttons button {
+    padding: 6px 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+<script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+<div id="chart"></div>
+
+<div id="controls">
+  <button id="toggle-theme">Toggle Theme</button>
+  <button id="export">Export Image</button>
+  <button id="toggle-sma">Toggle SMA</button>
+  <button id="toggle-bb">Toggle Bollinger Bands</button>
+  <button data-range="7">1W</button>
+  <button data-range="30">1M</button>
+  <button data-range="90">3M</button>
+  <button data-range="180">6M</button>
+  <button data-range="all">All</button>
+</div>
 
 > The price of gold is per 1 gram. The gold prices were obtained from [Public Gold&#174;](https://publicgold.com.my/) and updated everyday (midnight-1 a.m.).
 
